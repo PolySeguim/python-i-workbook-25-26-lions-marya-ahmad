@@ -72,3 +72,15 @@ def bottleDeposits():
 bottleDeposits()
 #Testing Suite
 #areaRoom()
+
+"""Exercise 4: Area of a Field"""
+def areaField():
+    print("Area of Field")
+    width = float(input("Width (in feet): "))
+    length = float(input("Length (in feet): "))
+
+    areaField = width*length
+    areaField = areaField/43560
+    areaField = round(areaField, 2)
+    print("Area of the field is " + str(areaField) + " acres")
+    areaField()
