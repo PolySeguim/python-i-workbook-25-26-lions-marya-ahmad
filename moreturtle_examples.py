@@ -26,10 +26,12 @@ def forward100():
 def right90():   
     marya.right(90)
 
+
 #screen is a screen object and it has behaviors
 # like onkey, onkeypress
 screen.onkey(forward100, "Up") 
 screen.onkey(right90, "Right")  
+
 
 screen.listen() 
 screen.mainloop() 
