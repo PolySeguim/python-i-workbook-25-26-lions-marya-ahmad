@@ -27,6 +27,15 @@ def right90():
     marya.right(90)
 
 
+def rainbow():
+    colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+    for color in colors:
+        marya.color(color)
+        marya.forward(10)
+        marya.circle(20)
+        marya.forward(10)
+
+
 #screen is a screen object and it has behaviors
 # like onkey, onkeypress
 screen.onkey(forward100, "Up") 
@@ -35,6 +44,6 @@ screen.onkey(right90, "Right")
 
 screen.listen() 
 screen.mainloop() 
-
+rainbow()
 # Keep the window open until clicked
 turtle.done()
