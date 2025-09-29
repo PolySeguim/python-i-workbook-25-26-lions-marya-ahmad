@@ -59,8 +59,8 @@ if __name__ == "__main__":
 
 """Exercise 6:  Tax and Tip"""
 def taxAndTip():
-    mealCost = float(input("What is the cost of your meal? $"))
-    taxRate = float(input("What is the tax rate in your area as a percent? "))
+    mealCost = float(input("Cost of your meal: $"))
+    taxRate = float(input("Tax rate in your area as a percent:"))
     tax = mealCost * (taxRate / 100)
     tip = mealCost * 0.18
     totalCost = mealCost + tax + tip
@@ -73,19 +73,19 @@ taxAndTip()
 def sumOfFirstN():
     n = int(input("Enter a positive integer: "))
     sum = (n*(n + 1))/2
-    print("The sum of the first", n, "positive integers is", sum)
+    print("The sum of the first", n, "positive integers is:", sum)
 sumOfFirstN() 
 
 """Exercise 8:  Widgets and Gizmos"""
 def widgetsAndGizmos():
-    numGizmos = int(input("How many gizmos are in your order? "))
+    numGizmos = int(input("Number of gizmos in the order:"))
     weightGizmos = numGizmos * 112
-    print("The total weight of your order is", weightGizmos, "grams")
+    print("The total weight of the order is", weightGizmos, "grams")
 widgetsAndGizmos()
 
 """Exercise 9:  Compound Interest"""
 def compoundInterest():
-    principal = float(input("Enter the amount of money deposited into the account: $"))
+    principal = float(input("Amount of money deposited into the account: $"))
     rate = 0.04
     for year in range(1, 4):
         amount = principal * (1 + rate) ** year
@@ -95,8 +95,8 @@ compoundInterest()
 """Exercise 10:  Arithmetic"""
 import math
 def arithmetic():
-    a = int(input("Enter an integer a: "))
-    b = int(input("Enter an integer b: "))
+    a = int(input("Enter an integer (a): "))
+    b = int(input("Enter an integer (b): "))
     sum = a + b
     difference = a - b
     product = a * b
@@ -104,11 +104,11 @@ def arithmetic():
     remainder = a % b
     log10a = math.log10(a)
     power = a ** b
-    print("The sum of a and b is", sum)
-    print("The difference when b is subtracted from a is", difference)
-    print("The product of a and b is", product)
-    print("The quotient when a is divided by b is", quotient)
-    print("The remainder when a is divided by b is", remainder)
-    print("The result of log10 a is", log10a)
-    print("The result of a to the power of b is", power)
+    print("The sum of a and b is:", sum)
+    print("The difference when b is subtracted from a is:", difference)
+    print("The product of a and b is:", product)
+    print("The quotient when a is divided by b is:", quotient)
+    print("The remainder when a is divided by b is:", remainder)
+    print("The result of log10 a is:", log10a)
+    print("The result of a to the power of b is:", power)
 arithmetic()

@@ -24,14 +24,6 @@ numbers.  Include units in your prompt and output message;
 either feet or meters, depending on which unit you are more 
 comfortable working with.  (13 lines)
 """
-def areaRoom():
-    print("Area of Room")
-    units = input("What units are you using?  feet or meters: ")
-    width = float(input("Width: "))
-    length = float(input("Length: "))
-
-    areaRoom = width*length
-    print("Area of the room is " + str(areaRoom) + " " + units + " squared")
 
 """
 Exercise 4:  Area of a Field
@@ -68,18 +60,18 @@ print("4857 Tillinghast Ct")
 print("Mason, OH 45040")
 
 """Exercise 2:  Hello"""
-userName = input("What is your name? ")
+userName = input("Enter your name:")
 print("Hello", userName)
 
 """Exercise 3:  Area of a Room"""
-width = float(input("What is the width of the room in feet?"))
-length = float(input("What is the length of the room in feet?"))
+width = float(input("Width of the room in feet:"))
+length = float(input("Length of the room in feet:"))
 area = width * length
 print("The area of the room is", area, "square feet")
 
 """Exercise 4:  Area of a Field"""
-length = float(input("What is the length of the field in feet?"))
-width = float(input("What is the width of the field in feet?"))
+length = float(input("Length of the field in feet:"))
+width = float(input("Width of the field in feet:"))
 areaAcres = (length * width)/43560
 print("The area of the field is", areaAcres, "acres")
 
@@ -89,5 +81,5 @@ def bottleDeposits():
     numOneLiterBottle = int(input("Amount of bottles 1 liter or less:"))
     numMoreThanOneLiterBottle = int(input("Amount of bottles more than 1 liter:"))
     refund = (numOneLiterBottle * 0.10) + (numMoreThanOneLiterBottle * 0.25)
-    print("Your refund is $" ,refund)
+    print("Your refund is: $" ,refund)
 bottleDeposits()
