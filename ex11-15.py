@@ -86,24 +86,24 @@ if __name__ == "__main__":
 
 """Exercise 11: Fuel Efficiency"""
 def fuelEfficiency():
-    mpg = float(input("What is the fuel efficiency in miles per gallon? "))
+    mpg = float(input("Fuel efficiency in miles per gallon:"))
     l_per_100km = 235.215 / mpg
-    print("The fuel efficiency in liters per 100 kilometers is", l_per_100km)  
+    print("Fuel efficiency in liters per 100 kilometers:", l_per_100km)  
 fuelEfficiency()
 
 """Exercise 12:  Distance Between Two Points on Earth"""
 def distanceTwoPoints():
-    t1 = math.radians(float(input("Enter the latitude of point 1 in degrees: ")))
-    g1 = math.radians(float(input("Enter the longitude of point 1 in degrees: ")))
-    t2 = math.radians(float(input("Enter the latitude of point 2 in degrees: ")))
-    g2 = math.radians(float(input("Enter the longitude of point 2 in degrees: ")))
+    t1 = math.radians(float(input("Latitude of point 1 in degrees: ")))
+    g1 = math.radians(float(input("Longitude of point 1 in degrees: ")))
+    t2 = math.radians(float(input("Latitude of point 2 in degrees: ")))
+    g2 = math.radians(float(input("Longitude of point 2 in degrees: ")))
     distance = 6371.01 * math.acos(math.sin(t1) * math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1 - g2))
-    print("The distance between the two points is", distance, "km")
+    print("Distance between the two points:", distance, "km")
 distanceTwoPoints()
 
 """Exercise 13: Making Change"""
 def makingChange():
-    cents = int(input("What is the amount of change in cents?"))
+    cents = int(input("Amount of change in cents:"))
     toonies = cents // 200
     cents = cents % 200
     loonies = cents // 100
@@ -125,22 +125,22 @@ makingChange()
 
 """Exercise 14:  Height Units"""
 def heightUnits():
-    feet = int(input("What is the number of feet: "))
-    inches = int(input("What is the number of inches: "))
+    feet = int(input("Number of feet: "))
+    inches = int(input("Number of inches: "))
     total_inches = (feet * 12) + inches
     centimeters = total_inches * 2.54
-    print("The height in cm is", centimeters)
+    print("The height in cm:", centimeters)
 heightUnits()
 
 """Exercise 15:  Distance Units"""
 def distanceUnits():
-    feet = float(input("What is the distance in feet? "))
+    feet = float(input("Distance in feet:"))
     inches = feet * 12
     yards = feet / 3
     miles = feet / 5280
-    print("The distance in inches is", inches)
-    print("The distance in yards is", yards)
-    print("The distance in miles is", miles)
+    print("Distance in inches:", inches)
+    print("Distance in yards:", yards)
+    print("Distance in miles:", miles)
 distanceUnits()
 
 
