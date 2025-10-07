@@ -1,11 +1,11 @@
 
-"""
-Exercise 1:  Mailing Address
+""" Exercise 1:  Mailing Address
 Create a program that displays your name and complete mailing 
 address formatted in the manner that you would usually see it 
 on the outside of an envelope.  Your program does not need to 
 read any input from the user.  (9 lines)
 """
+
 
 """
 Exercise 2:  Hello
@@ -24,14 +24,6 @@ numbers.  Include units in your prompt and output message;
 either feet or meters, depending on which unit you are more 
 comfortable working with.  (13 lines)
 """
-def areaRoom():
-    print("Area of Room")
-    units = input("What units are you using?  feet or meters: ")
-    width = float(input("Width: "))
-    length = float(input("Length: "))
-
-    areaRoom = width*length
-    print("Area of the room is " + str(areaRoom) + " " + units + " squared")
 
 """
 Exercise 4:  Area of a Field
@@ -55,20 +47,39 @@ those containers.  Format the output so that it includes a dollar
 sign and always displays exactly two decimal places.  (15 lines)
 """
 
+def print_hi(name):
+    print(f"Hi, {name}")
+
+
+if __name__ == "__main__":
+    print_hi("Netbeans")
+
+"""Exercise 1:  Mailing Address"""
+print("Marya Ahmad")
+print("4857 Tillinghast Ct")
+print("Mason, OH 45040")
+
+"""Exercise 2:  Hello"""
+userName = input("Enter your name:")
+print("Hello", userName)
+
+"""Exercise 3:  Area of a Room"""
+width = float(input("Width of the room in feet:"))
+length = float(input("Length of the room in feet:"))
+area = width * length
+print("The area of the room is", area, "square feet")
+
+"""Exercise 4:  Area of a Field"""
+length = float(input("Length of the field in feet:"))
+width = float(input("Width of the field in feet:"))
+areaAcres = (length * width)/43560
+print("The area of the field is", areaAcres, "acres")
+
+"""Exercise 5:  Bottle Deposits"""
 def bottleDeposits():
-    # reads the number of bottles
-    numOneLiterBottle = int(input("Number of 1L bottles: "))
-    numMoreOneLiterBottle = int(input("Number of more than 1L bottles: "))
-    refund = numMoreOneLiterBottle*0.25+numOneLiterBottle*0.1
-    refund = round(refund, 2)
-    print("Your refund will be: $", "{:.2f}".format(refund))
-    # adding everything greater than 1
-
-
-    # To ensure we have two decimal places
-    # number_two_decimal = "{:.2f}".format(number_string)
-    # print(number_two_decimal)
-
+    refund = 0
+    numOneLiterBottle = int(input("Amount of bottles 1 liter or less:"))
+    numMoreThanOneLiterBottle = int(input("Amount of bottles more than 1 liter:"))
+    refund = (numOneLiterBottle * 0.10) + (numMoreThanOneLiterBottle * 0.25)
+    print("Your refund is: $" ,refund)
 bottleDeposits()
-#Testing Suite
-#areaRoom()
