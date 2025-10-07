@@ -57,47 +57,57 @@ if necessary.
 """
 
 """Exercise 21: Area of a Triangle"""
-base = float(input("Base of the triangle (b): "))
-height = float(input("Height of the triangle (h): "))
-area = (base * height) / 2
-print("Area of the triangle:", area)
+def area_of_triangle():
+     base = float(input("Base of the triangle (b): "))
+     height = float(input("Height of the triangle (h): "))
+     area = (base * height) / 2
+     print("Area of the triangle:", area)
+area_of_triangle()
 
 
 """Exercise 22: Area of a Triangle (Again)"""
-s1 = float(input("Length of side 1: "))
-s2 = float(input("Length of side 2: "))
-s3 = float(input("Length of side 3: "))
-s = (s1 + s2 + s3) / 2
-area = (s * (s - s1) * (s - s2) * (s - s3)) ** 0.5
-print("Area of the triangle:", area)
+def area_of_triangle_again():
+     s1 = float(input("Length of side 1: "))
+     s2 = float(input("Length of side 2: "))
+     s3 = float(input("Length of side 3: "))
+     s = (s1 + s2 + s3) / 2
+     area = (s * (s - s1) * (s - s2) * (s - s3)) ** 0.5
+     print("Area of the triangle:", area)
+area_of_triangle_again()
 
 
 """Exercise 23: Area of a Regular Polygon"""
-import math
-s = float(input("Length of side: "))
-n = int(input("Number of sides: "))
-area = (n * s**2) / (4 * math.tan(math.pi / n))
-print("Area of the regular polygon:", area)
+def area_of_regular_polygon():
+     import math
+     s = float(input("Length of side: "))
+     n = int(input("Number of sides: "))
+     area = (n * s**2) / (4 * math.tan(math.pi / n))
+     print("Area of the regular polygon:", area)
+area_of_regular_polygon()
 
 
 """Exercise 24: Units of Time"""
-days = int(input("Number of days: "))
-hours = int(input("Number of hours: "))
-minutes = int(input("Number of minutes: "))
-seconds = int(input("Number of seconds: "))
-total_seconds = days * 86400 + hours * 3600 + minutes * 60 + seconds
-print("Total number of seconds:", total_seconds)
+def units_of_time():
+     days = int(input("Number of days: "))
+     hours = int(input("Number of hours: "))
+     minutes = int(input("Number of minutes: "))
+     seconds = int(input("Number of seconds: "))
+     total_seconds = days * 86400 + hours * 3600 + minutes * 60 + seconds
+     print("Total number of seconds:", total_seconds)
+units_of_time()
 
 
 """Exercise 25: Units of Time (Again)"""
-total_seconds = int(input("Total number of seconds: "))
-days = total_seconds // 86400
-remaining = total_seconds % 86400
-hours = remaining // 3600
-remaining %= 3600
-minutes = remaining // 60
-seconds = remaining % 60
-print(f"{days}:{hours:02}:{minutes:02}:{seconds:02}")
+def units_of_time_again():
+     total_seconds = int(input("Total number of seconds: "))
+     days = total_seconds // 86400
+     remaining = total_seconds % 86400
+     hours = remaining // 3600
+     remaining %= 3600
+     minutes = remaining // 60
+     seconds = remaining % 60
+     print(f"{days}:{hours:02}:{minutes:02}:{seconds:02}")
+units_of_time_again()
 
 
 
