@@ -83,3 +83,58 @@ by 5/9 and then add 273.15 to it.
 
 if __name__ == "__main__":
     print("Hi there!")
+
+"""Exercise 16:  Area and Volume"""
+import math
+def areaAndVolume():
+    r = float(input("Radius: "))
+    area = math.pi * r**2
+    volume = (4/3) * math.pi * r**3
+    print("Area of the circle:", area)
+    print("Volume of the sphere:", volume)
+areaAndVolume()
+
+"""Exercise 17:  Heat Capacity"""
+def heatCapacity():
+    m = float(input("Mass of water in grams: "))
+    deltaT = float(input("Temperature change in degrees Celsius: "))
+    C = 4.186  
+    q = m * C * deltaT  
+    print("Total energy required (in Joules):", q)
+    kWh = q / 3.6e6
+    cost_per_kWh = 0.089  
+    cost = kWh * cost_per_kWh
+    print("Cost of heating the water: $", round(cost, 4))
+heatCapacity()
+
+"""Exercise 18:  Volume of a Cylinder"""
+def volumeOfCylinder():
+    radius = float(input("Radius of the cylinder: "))
+    height = float(input("Height of the cylinder: "))
+    volume = math.pi * radius**2 * height
+    print("Volume of the cylinder:", round(volume, 1))
+volumeOfCylinder()
+
+"""Exercise 19:  Free Fall"""
+def freeFall():
+    height = float(input("Height from which the object is dropped (in meters): "))
+    a = 9.8  # Acceleration due to gravity in m/s^2
+    vi = 0  # Initial speed in m/s
+    vf = (vi**2 + 2 * a * height)**0.5
+    print("Final speed when it hits the ground:", vf, "m/s")
+freeFall()
+
+"""Exercise 20: Ideal Gas Law"""
+def idealGasLaw():
+    P = float(input("Pressure in Pascals: "))
+    V = float(input("Volume in liters: "))
+    T = float(input("Temperature in Kelvin: "))
+    R = 8.314  # Ideal gas constant in J/molK
+    n = (P * V) / (R * T)
+    print("Amount of gas in moles:", n)
+idealGasLaw()
+
+
+
+
+      
