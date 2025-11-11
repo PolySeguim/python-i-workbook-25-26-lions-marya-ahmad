@@ -75,17 +75,7 @@ def main():
     max_calories = max_value(calories)
     print("Max calories is: ", max_calories)
 
-#Calculate the lowest value per list
-min_calories = max_value(calories)
-print("Max Calorie value: ", min_calories)
-
-
-
-
-
-
-
-#Calculate Averages
+    #Calculate Averages
     #Average Sugars
     average_sugars = calculateAverages(sugars)
     print("Average sugars", average_sugars)
@@ -98,9 +88,17 @@ print("Max Calorie value: ", min_calories)
     max_sugars = max_value(sugars)
     print("Max sugars is: ", max_sugars)
 
-#Calculate the lowest value per list
-min_sugars = max_value(sugars)
-print("Max sugars value: ", min_sugars)
+    #Calculate the lowest value per list
+    min_sugars = max_value(sugars)
+    print("Max sugars value: ", min_sugars)
+
+    #Calculate the lowest value per list
+    min_calories = max_value(calories)
+    print("Max Calorie value: ", min_calories)
+
+    print("Sugars for Burger King:", sugars_per_restaurant(sugars, "Burger King"))
+    
+
 
 
 if __name__ == '__main__':
