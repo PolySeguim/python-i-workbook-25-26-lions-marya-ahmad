@@ -15,42 +15,6 @@ entered by the user. For example, if the user enters the values
 on its own line.
 """
 
-def readIntegers():
-integers = [] #create a list of integers
-# instantiating, but I'm not initializing
-try:
-# get the user input and cast as an int
-user_input = int(input("Enter an integer: "))
-#conditional loop, that while there IS user_input
-# that it will add the value at the back of the list
-while user_input != "":
-integers.append(user_input)
-#print(integers) #this debugging
-# get the user input and cast as an int
-user_input = int(input("Enter an integer: "))
-except ValueError:
-user_input = ""
-print(f"Error: '{user_input}' cannot be converted to an integer.")
-return integers
-def displayIntegers(list_integers):
-neg_list = [] #this will hold the new values from the list
-zero_list = []
-pos_list = []
-all_integers = []
-for i in list_integers:
-if i<0:
-neg_list.append(i)
-elif i==0:
-zero_list.append(i)
-else:
-pos_list.append(i)
-all_integers.extend(neg_list)
-all_integers.extend(zero_list)
-all_integers.extend(pos_list)
-return(all_integers)
-#Printing the list of integers from above
-print(displayIntegers(readIntegers()))
-
 """
 Exercise 109: List of Proper Divisors
 A proper divisor of a positive integer, n, is a positive integer
@@ -77,3 +41,66 @@ return false. In addition, write a main program that uses your
 function to identify and display all of the perfect numbers between 1 and
 10,000. Import your solution to Exercise 109 when completing this task.
 """
+
+#Exercise 108: Negatives, Zeros, and Positives
+def readIntegers():
+    integers = []
+    while True:
+        user_input = input("Enter an integer (or press enter to end): ")
+        if user_input == "":
+            break
+        try:
+            number = int(user_input)
+            integers.append(number)
+        except ValueError:
+            print("please enter a valid integer")
+    return integers
+def displayIntegers(integers):
+    negatives = [num for num in integers if num < 0]
+    zeros = [num for num in integers if num == 0]
+    positives = [num for num in integers if num > 0]
+    
+    print("Negative numbers:")
+    for num in negatives:
+        print(num)
+    
+    print("Zeros:")
+    for num in zeros:
+        print(num)
+    
+    print("Positive numbers:")
+    for num in positives:
+        print(num)
+
+#Excerise 109: List of Proper Divisors
+def proper_divisors(n):
+    divisors = []
+    for i in range(1, n):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+def main_109():
+    user_input = int(input("Enter a positive integer: "))
+    divisors = proper_divisors(user_input)
+    print(f"Proper divisors of {user_input} are: {divisors}")
+
+#Exercise 110: Perfect Numbers
+def is_perfect(n):
+    divisors = proper_divisors(n)
+    return sum(divisors) == n
+def main_110():
+    print("Perfect numbers between 1 and 10,000:")
+    for num in range(1, 10001):
+        if is_perfect(num):
+            print(num)
+if __name__ == "__main__":
+
+    #Run excerise 108
+    integers = readIntegers()
+    displayIntegers(integers)
+    
+    #Run excerise 109
+    main_109()
+    
+    #Run excerise 110
+    main_110()
