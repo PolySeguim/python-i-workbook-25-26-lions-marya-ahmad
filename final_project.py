@@ -1,182 +1,191 @@
-#zombie apocalypse: survive or fall
+# CYOA: Zombie Apocalypse
 
-#ask player for their name (global variable)
+#game intro
 print("WELCOME TO Z-DAY: SURVIVE OR FALL")
 player_name = input("What is your name, survivor: ")
 print("\nGood luck,", player_name, "(you will need it). Your journey starts now...\n")
 
-#game functions
 
 def start():
-    print(player_name, ", you wake up in a abandonded house during a zombie apocalypse.")
-    print("Your head really hurts and you barely remember how you got here")
+    print(player_name, ", you wake up in an abandoned house during a zombie apocalypse.")
+    print("Your head hurts really bad and you barely remember how you got here.")
     print("Do you:")
-    print("A. Look outside the window")
-    print("B. Search the house")
+    print("1) Look outside the window")
+    print("2) Search the house")
 
-    choice = input("Choose A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         outside()
-    elif choice == "B":
+    elif choice == "2":
         house()
     else:
-        start()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 def outside():
     print("\nWatch out! There are zombies in the street,", player_name, "!")
-    print("You see a car with keys inside in the distance, but it will make too much noise")
-    print("You also see a sewer cover nearby")
+    print("You see a car with keys inside in the distance, but it will make too much noise.")
+    print("You also see a sewer cover nearby.")
     print("Do you:")
-    print("A) Take the car and drive")
-    print("B) Go down into the sewer")
+    print("1) Take the car and drive")
+    print("2) Go down into the sewer")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         car_run()
-    elif choice == "B":
+    elif choice == "2":
         sewer()
     else:
-        outside()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 def house():
-    print("\nYou search the house and find food and a pocket knife")
-    print("Suddenly, another survivor appears, she says her name is Lucy")
+    print("\nYou search the house and find food and a pocket knife.")
+    print("Suddenly, another survivor appears, she says her name is Lucy.")
     print("Do you:")
-    print("A) Trust Lucy")
-    print("B) Leave her alone")
+    print("1) Trust Lucy")
+    print("2) Leave her alone")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         team_with_lucy()
-    elif choice == "B":
+    elif choice == "2":
         alone_path()
     else:
-        house()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 #car path
 def car_run():
-    print("\nYou start the car but look behind you", player_name, "zombies are chasing you but they're slow")
+    print("\nYou start the car,", player_name, ", zombies are chasing you but they're slow.")
     print("Up ahead you see:")
-    print("A) A survivor camp")
-    print("B) A mysterious lab with guards and 'POLYLAB' written on the side")
+    print("1) A survivor camp")
+    print("2) A mysterious lab with guards and 'POLYLAB' written on the side")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         camp()
-    elif choice == "B":
+    elif choice == "2":
         lab_entrance()
     else:
-        car_run()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 #sewer path
 def sewer():
-    print("\nYou crawl into the sewer, it's dark and smells terrible")
-    print("You notice lights and machinery deeper in the tunnel")
+    print("\nYou crawl into the sewer,", player_name, ". It's dark and smells terrible.")
+    print("You notice lights and machinery deeper in the tunnel.")
     print("Do you:")
-    print("A) Explore further into the tunnel")
-    print("B) Climb out through a hatch to the surface")
+    print("1) Explore further into the tunnel")
+    print("2) Climb out through a hatch to the surface")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         lab_core()
-    elif choice == "B":
+    elif choice == "2":
         rooftop_escape()
     else:
-        sewer()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
-#house options
+# House options
 def team_with_lucy():
-    print("\nLucy cheers, she is happy you trusted her!")
-    print("Lucy whispers to you: 'There's a rumor about a cure in a lab nearby'")
+    print("\nLucy is happy you trusted her she decides to trust you too.")
+    print("She tells you that there is a rumor about a cure in a lab nearby.")
     print("Do you:")
-    print("A) Go searching for the lab")
-    print("B) Go to a survivor camp")
+    print("1) Go searching for the lab")
+    print("2) Go to a survivor camp")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         lab_entrance()
-    elif choice == "B":
+    elif choice == "2":
         camp()
     else:
-        team_with_lucy()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 def alone_path():
-    print("\nYou leave by yourself,")
-    print("A zombie grabs you from behind, you are cooked ngl...")
-    print("ENDING: You became a zombie.")
+    print("\nYou leave by yourself,", player_name, ".")
+    print("A zombie grabs you from behind — you didn't stand a chance.")
+    print("ENDING: You die and become a zombie!")
     quit()
 
 
-#camp scene
+#camp
 def camp():
-    print("\nYou arrive at a camp full of survivors,", player_name)
-    print("People whisper about a scientist named Dr. Poly controlling the infection, you remember seeing that name on the lab")
+    print("\nYou arrive at a camp full of survivors,", player_name, ".")
+    print("People whisper about a scientist named Dr. Poly controlling the infection; you remember seeing that name on the lab.")
     print("Do you:")
-    print("A) Stay safe at the camp")
-    print("B) Sneak out at night to find the lab")
+    print("1) Stay safe at the camp")
+    print("2) Sneak out at night to find the lab")
 
-    choice = input("A or B: ")
-    if choice == "A":
-        print("\nYou live safely,", player_name, " but never know what really happened.")
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
+        print("\nYou live safely,", player_name, ", but never know what really happened.")
         print("ENDING: Peaceful Survival")
-    elif choice == "B":
+    elif choice == "2":
         lab_entrance()
     else:
-        camp()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
-#lab paths
+#lab
 def lab_entrance():
-    print("\nYou reach the lab with guards and high fences and she the name 'POLYLAB' on the side.")
+    print("\nYou reach the lab with guards and high fences and see the name 'POLYLAB' on the side.")
     print("Do you:")
-    print("A) Sneak in through a vent")
-    print("B) Attack the guards directly")
+    print("1) Sneak in through a vent")
+    print("2) Attack the guards directly")
 
-    choice = input("A or B: ")
-    if choice == "A":
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
         lab_core()
-    elif choice == "B":
+    elif choice == "2":
         fight_guards()
     else:
-        lab_entrance()
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 def fight_guards():
-    print("\nYou charge at the guards...risky decision,")
-    print("You are shot before you get through the gate")
-    print("ENDING: Failed Attack.")
+    print("\nYou charge at the guards... risky decision,", player_name, ".")
+    print("You are shot before you get through the gate.")
+    print("ENDING: Your attack fails and you die.")
     quit()
 
 
 def lab_core():
-    print("\nInside the lab you discover the truth, scientists CREATED the zombies!!!!")
-    print("The scientist behind it all is Dr. Poly. She planned to control the world using the virus")
+    print("\nInside the lab,", player_name, ", you discover the truth. scientists CREATED the zombies!!!!")
+    print("The scientist behind it all is Dr. Poly. She planned to control the world using the virus.")
     print("Do you:")
-    print("A) Destroy the lab and end the infection")
-    print("B) Join Dr. Poly's evil mission to rule what's left of the world")
+    print("1) Destroy the lab and end the infection")
+    print("2) Join Dr. Poly's evil mission to rule what's left of the world")
 
-    choice = input("A or B: ")
-    if choice == "A":
-        print("\nYou blow up the generators,", player_name, ". The cure spreads into the air.")
-        print("Zombies weaken, humanity has a little hope. HERO ENDING!")
-    elif choice == "B":
-        print("\nYou join Dr. Poly,", player_name, ", and gain power over the survivors.")
-        print("ENDING: Villain of the New World")
-    quit()
+    choice = input("Pick 1 or 2: ")
+    if choice == "1":
+        print("\nYou blow up the generators and the cure is released to the world,", player_name, "!")
+        print("All of the zombies start to die and the world is saved! YOU BEAT THE ZOMBIES!")
+    elif choice == "2":
+        print("\nYou join Dr. Poly,", player_name, ", and rule the world!")
+        print("ENDING: You join the dark side!")
+    else:
+        print("\nInvalid choice. Game over.")
+        quit()
 
 
 def rooftop_escape():
     print("\nYou climb through the hatch and escape back into daylight,", player_name, ".")
     print("You're alive, but never uncover the truth behind the virus.")
-    print("ENDING: Survival Without Answers.")
+    print("ENDING: You survive, but with no answers.")
     quit()
 
 
-#start the game 
+# Start the game
 start()
