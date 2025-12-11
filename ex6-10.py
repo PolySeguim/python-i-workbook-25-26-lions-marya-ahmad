@@ -55,4 +55,60 @@ for computing the second last item in the list.
 """
 
 if __name__ == "__main__":
-    print("Hi there!")
+    print("Hi there!");
+
+"""Exercise 6:  Tax and Tip"""
+def taxAndTip():
+    mealCost = float(input("Cost of your meal: $"))
+    taxRate = float(input("Tax rate in your area as a percent:"))
+    tax = mealCost * (taxRate / 100)
+    tip = mealCost * 0.18
+    totalCost = mealCost + tax + tip
+    print("The tax on your meal is $", tax)
+    print("The tip on your meal is $", tip)
+    print("The total cost of your meal is $", totalCost)
+taxAndTip()
+
+"""Exercise 7: Sum of the First n Positive Integers"""
+def sumOfFirstN():
+    n = int(input("Enter a positive integer: "))
+    sum = (n*(n + 1))/2
+    print("The sum of the first", n, "positive integers is:", sum)
+sumOfFirstN() 
+
+"""Exercise 8:  Widgets and Gizmos"""
+def widgetsAndGizmos():
+    numGizmos = int(input("Number of gizmos in the order:"))
+    weightGizmos = numGizmos * 112
+    print("The total weight of the order is", weightGizmos, "grams")
+widgetsAndGizmos()
+
+"""Exercise 9:  Compound Interest"""
+def compoundInterest():
+    principal = float(input("Amount of money deposited into the account: $"))
+    rate = 0.04
+    for year in range(1, 4):
+        amount = principal * (1 + rate) ** year
+        print("The amount in the savings account after", year, "year(s) is $", format(amount, '.2f'))
+compoundInterest()
+
+"""Exercise 10:  Arithmetic"""
+import math
+def arithmetic():
+    a = int(input("Enter an integer (a): "))
+    b = int(input("Enter an integer (b): "))
+    sum = a + b
+    difference = a - b
+    product = a * b
+    quotient = a / b
+    remainder = a % b
+    log10a = math.log10(a)
+    power = a ** b
+    print("The sum of a and b is:", sum)
+    print("The difference when b is subtracted from a is:", difference)
+    print("The product of a and b is:", product)
+    print("The quotient when a is divided by b is:", quotient)
+    print("The remainder when a is divided by b is:", remainder)
+    print("The result of log10 a is:", log10a)
+    print("The result of a to the power of b is:", power)
+arithmetic()

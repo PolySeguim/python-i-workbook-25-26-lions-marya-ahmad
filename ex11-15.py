@@ -37,18 +37,6 @@ the distance with the formula discussed previously.  The math module
 contains a function named RADIANS which converts from degrees to radians.
 """
 
-def earthDistance():
-    t1 = float(input("t1: "))
-    g1 = float(input("g1: "))
-    t2 = float(input("t2: "))
-    g2 = float(input("g2: "))
-    #distance = 6371.01 x arccos(sin(t1) x sin(t2) + cos(t1) x cos(t2) x cos(g1-g2))
-
-    distance = 6371.01 * math.a23
-    cos(math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1-g2))
-    print(distance)
-
-earthDistance()
 """
 Exercise 13: Making Change
 Consider the software that runs on a self-checkout machine.  One task that
@@ -95,3 +83,64 @@ the equivalent distance in inches, yards, and miles.
 
 if __name__ == "__main__":
     print("Hello World!")
+
+"""Exercise 11: Fuel Efficiency"""
+def fuelEfficiency():
+    mpg = float(input("Fuel efficiency in miles per gallon:"))
+    l_per_100km = 235.215 / mpg
+    print("Fuel efficiency in liters per 100 kilometers:", l_per_100km)  
+fuelEfficiency()
+
+"""Exercise 12:  Distance Between Two Points on Earth"""
+def distanceTwoPoints():
+    t1 = math.radians(float(input("Latitude of point 1 in degrees: ")))
+    g1 = math.radians(float(input("Longitude of point 1 in degrees: ")))
+    t2 = math.radians(float(input("Latitude of point 2 in degrees: ")))
+    g2 = math.radians(float(input("Longitude of point 2 in degrees: ")))
+    distance = 6371.01 * math.acos(math.sin(t1) * math.sin(t2) + math.cos(t1) * math.cos(t2) * math.cos(g1 - g2))
+    print("Distance between the two points:", distance, "km")
+distanceTwoPoints()
+
+"""Exercise 13: Making Change"""
+def makingChange():
+    cents = int(input("Amount of change in cents:"))
+    toonies = cents // 200
+    cents = cents % 200
+    loonies = cents // 100
+    cents = cents % 100
+    quarters = cents // 25
+    cents = cents % 25
+    dimes = cents // 10
+    cents = cents % 10
+    nickels = cents // 5
+    cents = cents % 5
+    pennies = cents // 1
+    print("Toonies:", toonies)
+    print("Loonies:", loonies)
+    print("Quarters:", quarters)
+    print("Dimes:", dimes)
+    print("Nickels:", nickels)
+    print("Pennies:", pennies)
+makingChange()
+
+"""Exercise 14:  Height Units"""
+def heightUnits():
+    feet = int(input("Number of feet: "))
+    inches = int(input("Number of inches: "))
+    total_inches = (feet * 12) + inches
+    centimeters = total_inches * 2.54
+    print("The height in cm:", centimeters)
+heightUnits()
+
+"""Exercise 15:  Distance Units"""
+def distanceUnits():
+    feet = float(input("Distance in feet:"))
+    inches = feet * 12
+    yards = feet / 3
+    miles = feet / 5280
+    print("Distance in inches:", inches)
+    print("Distance in yards:", yards)
+    print("Distance in miles:", miles)
+distanceUnits()
+
+
