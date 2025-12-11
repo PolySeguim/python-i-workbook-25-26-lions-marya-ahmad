@@ -58,7 +58,7 @@ def house():
         quit()
 
 
-#car path
+#car
 def car_run():
     print("\nYou start the car,", player_name, ", zombies are chasing you but they're slow.")
     print("Up ahead you see:")
@@ -75,7 +75,7 @@ def car_run():
         quit()
 
 
-#sewer path
+#sewer
 def sewer():
     print("\nYou crawl into the sewer,", player_name, ". It's dark and smells terrible.")
     print("You notice lights and machinery deeper in the tunnel.")
@@ -93,7 +93,7 @@ def sewer():
         quit()
 
 
-# House options
+#house
 def team_with_lucy():
     print("\nLucy is happy you trusted her she decides to trust you too.")
     print("She tells you that there is a rumor about a cure in a lab nearby.")
